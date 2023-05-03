@@ -14,9 +14,9 @@ list_len = int(input("Введите длину списка: "))
 list_1 = [i for i in range(1, list_len+1)]
 print(list_1)
 closest_num = int(input("Введите число, которое хотите найти: "))
-min = (closest_num - list_1[0])**2
-for i in range(len(list_1)-1):
-      count = (closest_num - list_1[i])**2
+min = abs(closest_num - list_1[0])# abs - функция, которая показывает модуль числа
+for i in range(len(list_1)):
+      count = abs(closest_num - list_1[i])
       if count < min:
              min = count
 print(list_1[i])
